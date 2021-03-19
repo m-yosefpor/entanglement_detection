@@ -1,0 +1,92 @@
+%\usepackage{amsmath,amssymb,amsthm,flexisym,verbatim}
+%\usepackage[inline,shortlabels]{enumitem}
+%\usepackage{graphicx}
+%\graphicspath{{C:/Users/mohammad/Desktop/sth}}
+%\usepackage{caption,subcaption}
+%\usepackage{makeidx}
+%\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% font and persian %%%%
+%\usepackage{xepersian}
+%\settextfont{B Nazanin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{braket}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%%%
+\usepackage{mathrsfs,amsthm,amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage[doublespacing]{setspace}
+\usepackage{graphicx}
+\usepackage[labelfont={bf},justification=centering]{caption}
+\usepackage{subcaption}
+\usepackage{tabulary}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+%%%% reset footnote counter per page
+%\usepackage{perpage}
+%\MakePerPage{footnote}
+%%%%
+
+%%%% hyper ref
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+	citecolor=red,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+%%%%
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+\usepackage{tocbibind}
+\usepackage{cite}
+
+% Tikz package and module definition
+%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{bidiftnxtra}
+%\usepackage[hang,flushmargin]{footmisc} %also for foote not :| can use perpage here also
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.shapes}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{pgfplots.polar}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usepgflibrary{shapes.geometric}
+\usepgflibrary{shapes.arrows}
+\usetikzlibrary{mindmap,trees}
+
+
+\tikzset{my node/.style={rectangle, draw=black!100, text=black}}
+\tikzstyle{Branch} = [circle,inner sep=0pt,minimum size=2mm,fill=black,draw=black]
+\tikzstyle{Contact} = [circle,inner sep=0pt,minimum size=1mm,fill=white,draw=black]
+\tikzstyle{Antenna} = [isosceles triangle ,isosceles triangle stretches,very thick,inner sep=0pt,minimum width=0.5cm,minimum height=0.4cm,fill=white,draw=black,shape border rotate=-90]
+\tikzstyle{Block} = [draw,rectangle,very thick,minimum height=2.5em,minimum width=2cm,align=center]
+\tikzstyle{DashBlock} = [draw,dashed,rectangle, thick,minimum height=5em,text width=6cm,align=right]
+\tikzstyle{Sum} = [draw,circle,thick,inner sep=0mm,minimum size=5mm]
+\tikzstyle{Mul} = [draw,circle,thick,inner sep=0mm,minimum size=5mm]
+\tikzstyle{Operator} = [draw,circle,thick,inner sep=0mm,minimum size=5mm,align=center]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[a4paper, inner=2.5cm, outer=3.5cm, top=3.5cm, bottom=2.5cm, bindingoffset=0cm]{geometry}
+\usepackage[extrafootnotefeatures]{xepersian}
+\settextfont[Scale=1]{XB Niloofar}
+\defpersianfont\Nastaliq[Scale=1]{IranNastaliq}
+\defpersianfont\titlefont[Scale=1]{B Titr}
+
+%%%%%%%%% footnote counter reset per page
+\usepackage{zref-perpage}
+\zmakeperpage{footnote}

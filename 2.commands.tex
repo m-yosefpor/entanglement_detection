@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% making abjad numerate instead of persian alphabet order %%%%
+%\makeatletter
+%\def\abjad@zero{}
+%\def\abj@num@i#1{%
+%	\ifcase#1\or الف\or ب\or ج\or د%
+%	\or ه‍\or و\or ز\or ح\or ط\fi
+%	\ifnum#1=\z@\abjad@zero\fi}
+%\def\abj@num@ii#1{%
+%	\ifcase#1\or ی\or ک\or ل\or م\or ن%
+%	\or س\or ع\or ف\or ص\fi
+%	\ifnum#1=\z@\fi\abj@num@i}
+%\def\abj@num@iii#1{%
+%	\ifcase#1\or ق\or ر\or ش\or ت\or ث%
+%	\or خ\or ذ\or ض\or ظ\fi
+%	\ifnum#1=\z@\fi\abj@num@ii}
+%\def\abj@num@iv#1{%
+%	\ifcase#1\or غ\fi
+%	\ifnum#1=\z@\fi\abj@num@iii}
+%\let\@latinalph\@alph%
+%\let\@latinAlph\@Alph%
+%\def\PersianAlphs{%
+%	\let\@alph\abjadnumeral%
+%	\let\@Alph\abjadnumeral%
+%}
+%\def\LatinAlphs{%
+%	\let\@alph\@latinalph%
+%	\let\@Alph\@latinAlph%
+%}
+%\PersianAlphs
+%\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% page intentionally left blank %%%%
+%\newcommand*{\blankpage}{%
+%	\vspace*{\fill}
+%	{\centering \textit{This page intentionally left blank}\par}
+%	\vspace{\fill}}
+%\makeatletter
+%\renewcommand*{\cleardoublepage}{\clearpage\if@twoside \ifodd\c@page\else
+%	\blankpage
+%	\thispagestyle{empty}
+%	\newpage
+%	\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+%\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% new objects %%%%
+%\newtheorem{tamrin}{تمرین}
+%\newtheorem*{pasokh}{پاسخ}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% defining new abbreviations %%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\renewcommand\citeform[1]{[#1]}
+\renewcommand\citeleft{}
+\renewcommand\citeright{}
+\renewcommand\citepunct{, }
+\renewcommand\citedash{-}
+
+% \renewcommand\gamma{l}
+
+\newcommand{\chapterPATH}[1]{./2.main/Chapter#1/Chapter#1.tex}
+\newcommand{\sectionPATH}[2]{./2.main/Chapter#1/Sections/#2.tex}
+\newcommand{\formulaPATH}[2]{./2.main/Chapter#1/Formulas/#2.tex}
+\newcommand{\figurePATH}[2]{./2.main/Chapter#1/Figures/#2.tex}
+\newcommand{\pngPATH}[2]{./2.main/Chapter#1/Figures/#2.PNG}
+\newcommand{\pdfPATH}[2]{./2.main/Chapter#1/Figures/#2.pdf}
+\newcommand{\tablePATH}[2]{./2.main/Chapter#1/Tables/#2.tex}
+
+
+\newcommand{\Save}[2]{\newcommand{\Reg}{#1#2}}
+\newcommand{\SAVE}[1]{\newcommand{\SC}{#1}}
+
+\newcommand{\Fig}[2]{شكل~\ref{fig:#1.#2}}
+\newcommand{\Tab}[2]{جدول~\ref{tab:#1.#2}}
+\newcommand{\Eq}[2]{رابطه~\eqref{eq:#1.#2}}
+
+\newcommand{\mb}{\mathbf}
+\newcommand{\bs}{\boldsymbol}
+\newcommand{\jj}{\boldsymbol{j}}
+
+\newcommand{\mm}{\mathbf}
+\newcommand{\vt}{\boldsymbol}
+
+\newcommand{\pk}{| \psi \rangle}
+\newcommand{\pb}{\langle \psi |}
+\newcommand{\pd}{\rho_{\psi}}
+\newcommand{\hi}{\mathcal{H}}
+\newcommand{\cn}{\mathcal{N}}
+
+
+
+\def\a{\alpha}
+\def\b{\beta}
+\def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\ve{\varepsilon}
+\def\vr{\varrho}
+\def\vp{\varphi}
+\def\ka{\kappa}
+\def\om{\omega}
+\def\Om{\Omega}
+\def\s{\sigma}
+\def\vs{\varsigma}
+\def\La{\Lambda}
+\def\ups{\upsilon}
+\def\vt{\vartheta}
+\def\t{\theta}
+\def\om{\omega}
+\def\Om{\Omega}

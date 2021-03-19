@@ -1,0 +1,18 @@
+
+\newpage\thispagestyle{empty}
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+\renewcommand{\headrulewidth}{0.5pt}
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+\fancyhf[HLE,HRO]{\textit{\rightmark}}
+\fancyhf[HRE,HLO]{\textit{\leftmark}}
+
+\setcounter{chapter}{0}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{\chapterPATH{1}}
+\input{\chapterPATH{2}}
+\input{\chapterPATH{3}}
+\input{\chapterPATH{4}}
