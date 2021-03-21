@@ -6,11 +6,15 @@
 [ ] chapter 2: 15p
 [ ] chapter 3: 25p
 [ ] chapter 4: 5p
-[ ] figures
-[ ] formulas
-[ ] citations
+
+[x] figures
 [ ] clean up
+[ ] citations
+
+[ ] auto-encoders
+[ ] neural networks
+[ ] separate generation
 
 [ ] pure and mixed
-[ ] confusin Matrix
-[ ] neural networks
+[ ] confusion Matrix
+
