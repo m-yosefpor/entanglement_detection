@@ -1,7 +1,8 @@
 \section{تقارن استوانه ای}
 
 حالت های کوانتمی که در آزمایشگاه استفاده می شوند،‌ تقارن های خاصی دارند که معمولا از تقارن های دستگاه تولید کننده ی آن ها ناشی می شود.
-این تقارن ها، شرایطی را روی ماتریس های چکالی الزام می کنند که باعث می شود گستره ی آن ها خاص تر شود. در نتیجه ممکن است اطلاعات تقارن حالت ها، به تشخیص درهم تنیدگی کمک کند.  چون که تقارن ها، شرط های لازمی که در واقع روابطی بین ویژگی ها هستند را ایجاد می کنند، در این قسمت ما تقارن استوانه ای را مورد بررسی قرار داده ایم. در این جا محور تقارن استوانه ای
+این تقارن ها، شرایطی را روی ماتریس های چکالی الزام می کنند که باعث می شود گستره ی آن ها خاص تر شود. در نتیجه ممکن است اطلاعات تقارن حالت ها، به تشخیص درهم تنیدگی کمک کند،  چرا که تقارن ها، شرط های لازمی که در واقع روابطی بین ویژگی ها هستند را ایجاد می کنند.
+در این قسمت ما تقارن استوانه ای را مورد بررسی قرار داده ایم. در این جا محور تقارن استوانه ای
 $z$
 در نظر گرفته شده است.
 
@@ -33,11 +34,21 @@ R_z(\theta) = e^{i\theta\sigma_z} \implies (\forall \theta \enspace [e^{i\theta\
 [\sigma_z\otimes \mathbb{I} + \mathbb{I}\otimes \sigma_z , \rho] = 0
 \end{equation}
 
-Substituting $\rho = \frac{1}{4}\sum a_{ij} \sigma_i \otimes \sigma_j$ results in:
+
+با جایگذاری
+$\rho = \frac{1}{4}\sum a_{ij} \sigma_i \otimes \sigma_j$
+نتیجه می گیریم:
+
 \begin{equation}
 \sum a_{ij} [\sigma_z,\sigma_i]\otimes \sigma_j + \sum a_{ij} \sigma_i \otimes [\sigma_z,\sigma_j]=0
 \end{equation}
-using $[\sigma_i,\sigma_j] = 2i\epsilon_{ijk} \sigma_k$ we derive a condition for cylindrical symmetry:
+
+
+با توجه به رابطه ی
+$[\sigma_i,\sigma_j] = 2i\epsilon_{ijk} \sigma_k$
+که بین ماتریس های پاولی برقرار است  داریم:
+
+
 \begin{equation}
 \begin{split}
     2i \sum_j a_{xj}\sigma_y\otimes\sigma_j - a_{yj}\sigma_x\otimes\sigma_j \\
