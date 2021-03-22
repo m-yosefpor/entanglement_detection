@@ -2,17 +2,14 @@
 [x] install tex, xelatex (fonts?) and compile
 [x] front material
 [x] chapters and sections
-[x] chapter 1: 15p -> 10
-[ ] chapter 2: 15p
-[ ] chapter 3: 25p
-[ ] chapter 4: 5p
+[x] chapter 1
+[x] chapter 2
+[x] chapter 3
+[x] chapter 4
 
 [x] figures
-[ ] clean up
-[ ] citations
+[x] clean up
+[x] citations
 
 [ ] pure and mixed
 [ ] CHSH +2
-
-[ ] confusion Matrix
-
