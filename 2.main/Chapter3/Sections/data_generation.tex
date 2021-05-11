@@ -1,0 +1,64 @@
+\section{تولید داده ها}
+
+برای این که بتوانیم از یادگیری ماشین استفاده کنیم، نیاز است چند میلیون حالت کوانتمی برای این کار استفاده شود.
+ما این داده ها را به صورت مصنوعی، با انتخاب تصادفی از فضای هیلبرت سیستم تولید کردیم.
+نحوه ی تولید داده ها با استفاده از کتابخانه ی
+\lr{qutip}
+در پایتون به این صورت است که
+یک ماتریس هرمیتی
+تصادفی
+$H$
+که
+$4\times 4$
+است
+انتخاب می کنیم. سپس
+$P=H^\dag H$
+را محاسبه کرده و ماتریس نرمال شده ی
+$N$
+را به صورت
+$N = \frac{P}{\Tr P}$
+محاسبه می کنیم.
+با استفاده از این ماتریس و تابع
+\lr{Qobj}
+کتابخانه ی
+\lr{qutip}
+یک ماتریس چگالی برای سیستم دوکیوبیتی تولید می کنیم.
+
+پس از آنکه با این روش ۵ میلیون ماتریس چگالی تصادفی تولید کردیم، ویژگی های مورد نظر که همان
+$\Gamma_{ij}$
+ها بودند را توسط معادله ی
+\ref{eqn:feature_cal}
+محاسبه کردیم:
+
+\[
+   \Gamma =
+  \left[ {\begin{array}{cccc}
+\langle\sigma_x\otimes\sigma_x\rangle & \langle\sigma_x\otimes\sigma_y\rangle & \langle\sigma_x\otimes\sigma_z\rangle & \langle\sigma_x\otimes\ \mathbb{I}\rangle
+\\ \langle\sigma_y\otimes\sigma_x\rangle & \langle\sigma_y\otimes\sigma_y\rangle & \langle\sigma_y\otimes\sigma_z\rangle & \langle\sigma_y\otimes\ \mathbb{I}\rangle
+\\ \langle\sigma_z\otimes\sigma_x\rangle & \langle\sigma_z\otimes\sigma_y\rangle & \langle\sigma_z\otimes\sigma_z\rangle & \langle\sigma_z\otimes \mathbb{I}\rangle
+\\ \langle\mathbb{I}\otimes\sigma_x\rangle & \langle\mathbb{I}\otimes\sigma_y\rangle & \langle\mathbb{I}\otimes\sigma_z\rangle &    \langle\mathbb{I}\otimes\ \mathbb{I}\rangle
+  \end{array} } \right]
+\]
+
+
+سپس این ويژگی ها را به صورت یک سطر
+$15 \times 1$
+با حذف ۱۶ امین ویژگی بدیهی ۱ حاصل از
+$ \mathbb{I} \otimes \mathbb{I}$
+در آوردیم. این کار برای تمامی ۵ میلیون ماتریس چگالی انجام شد.
+
+در قسمت اول این پروژه، از روش یادگیری نظارت شده برای تفکیک حالت ها استفاده کردیم. بنابرین در این روش ها نیاز است که برچسب
+\LTRfootnote{Label}
+هر یک از داده ها مشخص شود (که به معنی جداپذیر بودن یا در هم تنیده بودن است).
+با توجه به اینکه در حالت دوکیوبیت این کار با معادله ی
+\ref{eqn:augusiak}
+و داشتن تمامی ۱۵ ویژگی امکان پذیر است، ما توانستیم تمامی داده ها را برچسب گذاری کنیم.
+برچسب گذاری به صورت عدد ۰ برای جداپذیر ها و برچسب عدد ۱ برای درهم تنیده ها صورت گرفت.
+
+تمامی این برچسب ها در ستون آخر (۱۶ ام) برای هر یک از ماتریس های چگالی ذخیره شد.
+.پس داده نهایی به صورت یک ماتریس با ۵ میلیون سطر و ۱۶ ستون به دست آمد.
+این داده ها را به صورت عمومی در
+\lr{Gitlab}
+بر روی اینترنت
+\LTRfootnote{\small{\texttt{https://gitlab.com/quantum-machine-learning/autoencoder-entanglement-detection-optimizer}}}
+قرار داده ایم و برای عموم قابل دسترس کرده ایم.

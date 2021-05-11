@@ -1,0 +1,64 @@
+\section{تقارن استوانه ای}
+
+حالت های کوانتمی که در آزمایشگاه استفاده می شوند،‌ معمولا تقارن های خاصی دارند که معمولا از تقارن های دستگاه تولید کننده ی آن ها ناشی می شود.
+این تقارن ها، شرایطی را روی ماتریس های چکالی الزام می کنند که باعث می شود گستره ی آن ها خاص تر شود. در نتیجه ممکن است اطلاعات تقارن حالت ها، به تشخیص درهم تنیدگی کمک کند،  چرا که تقارن ها، اطلاعات اضافه ای در مورد ویژگی ها ارایه می دهند.
+در این قسمت ما تقارن استوانه ای را مورد بررسی قرار داده ایم. در این جا محور تقارن استوانه ای
+$z$
+در نظر گرفته شده است.
+
+\begin{equation}\label{eqn:sym_cond1}
+(R_z(\theta) \otimes R_z(\theta))\> \rho\> (R_z(\theta)^\dag R_z(\theta)^\dag) = \rho
+\end{equation}
+
+برای یک ماتریس چگالی با تقارن استوانه ای، معادله ی
+\ref{eqn:sym_cond1}
+برقرار است. در نتیجه باید شرط زیر برای همه ی زوایای
+$\theta$
+برقرا باشد:
+
+\begin{equation}\label{eqn:sym_cond2}
+    \forall \theta \enspace [R_z(\theta)\otimes R_z(\theta) , \rho] = 0
+\end{equation}
+
+که در آن عملگر دوران به این صورت است:
+
+\begin{equation}\label{eqn:sym_cond3}
+R_z(\theta) = e^{i\theta\sigma_z} \implies (\forall \theta \enspace [e^{i\theta\sigma_z}\otimes e^{i\theta\sigma_z} , \rho] = 0)
+\end{equation}
+
+با ساده سازی معادله ی
+\ref{eqn:sym_cond3}
+به رابطه ی زیر می رسیم:
+
+\begin{equation}\label{eqn:sym_cond4}
+[\sigma_z\otimes \mathbb{I} + \mathbb{I}\otimes \sigma_z , \rho] = 0
+\end{equation}
+
+
+با جایگذاری
+$\rho = \frac{1}{4}\sum a_{ij} \sigma_i \otimes \sigma_j$
+نتیجه می گیریم:
+
+\begin{equation}
+\sum a_{ij} [\sigma_z,\sigma_i]\otimes \sigma_j + \sum a_{ij} \sigma_i \otimes [\sigma_z,\sigma_j]=0
+\end{equation}
+
+
+با توجه به رابطه ی
+$[\sigma_i,\sigma_j] = 2i\epsilon_{ijk} \sigma_k$
+که بین ماتریس های پاولی برقرار است  داریم:
+
+
+\begin{equation}
+\begin{split}
+    2i \sum_j a_{xj}\sigma_y\otimes\sigma_j - a_{yj}\sigma_x\otimes\sigma_j \\
+    + a_{jx}\sigma_j\otimes\sigma_y - a_{jy} \sigma_j\otimes\sigma_x = 0
+\end{split}
+\end{equation}
+
+ماتریس های چگالی را با الگوریتمی که در کد آمده است،‌ به صورتی پیدا می کنیم که تمام شرایط گفته شده در بالا را برآورده کند. سپس تمامی مدل های ارایه شده در قسمت های قبل را مجددا با این داده ها آموزش می دهیم. در این حالت نتایج بهتری از قبل به دست می آوریم. نتایج حاصل شده با وجود تقارن استوانه ای، در شکل
+\ref{fig:acc_rec_n}
+آورده شده است. همانگونه که مشاهده می شود، در این حالت، با ۴
+اندازه گیری خطی، می توان تقریبا به تفکیک کامل دست یافت. همچنین فقط با یک اندازه گیری خطی به صحت
+۹۰٪
+دست یافتیم.
