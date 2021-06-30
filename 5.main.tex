@@ -8,6 +8,17 @@
 \fancyhf[HRE,HLO]{\textit{\leftmark}}
 
 \setcounter{chapter}{0}
+
+%%% Fix to a bug with xepersian setdigitfont issue on xelatex upgrade
+%% This block should come before setdigitfont
+\ExplSyntaxOn
+\cs_set_eq:NN
+\etex_iffontchar:D
+\tex_iffontchar:D
+\cs_undefine:N \c_one
+\int_const:Nn \c_one { 1 }
+\ExplSyntaxOff
+%%%
 \setdigitfont{XB Niloofar}
 
 \input{\chapterPATH{1}}
